@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc $CFILE; mv a.out main.o
+gcc $CFILE -wrapper @ $CFILE
