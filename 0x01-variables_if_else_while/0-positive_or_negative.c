@@ -2,11 +2,10 @@
 #include <time.h>
 #include <stdio.h>
 /*more headers goes there*/
-/*
- *Random number generatior
+/*Random number generatior
  */
 /*betty style doc for function main goes there*/
-main(void)
+int main(void)
 {
 	int n;
 
