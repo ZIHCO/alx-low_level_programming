@@ -11,19 +11,16 @@
 int main(void)
 {
 	int n;
-	int t;
-	char strn[4];
+	int t; /* generates the last digit of n*/
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	sprint(strn, "%d", n);
-	export t = strn[1];
-	printf("%d %s\n", n, strn);
-	if (n > 0)
-		printf("%d is positive\n", n);
-	else if (n < 0)
-		printf("%d is negative\n", n);
+	t = n % 10;
+	if (t > 5)
+		printf("Last digit of %d is greater than 5\n", n);
+	else if (n == 0)
+                printf("Last digit of %d is greater than 5\n", n);
 	else
-		printf("%d is zero\n", n);
+                printf("Last digit of %d is greater than 5\n", n);                                                                                   
 	return (0);
 }
