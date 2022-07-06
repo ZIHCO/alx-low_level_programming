@@ -1,21 +1,21 @@
+#include <stdlib.h>
 #include <stdio.h>
 /**
- * main - Random number generator
- * tell if a number is positive, negative or zero
+ * main - print out the decimal digits
  *
  * Return: 0
 */
 int main(void)
 {
-	int n;
-	int putchar(int n);
+	int num;
 
-	n = 0;
-	while (n < 10)
+	num = '0';
+	while (num <= '9')
 	{
-		putchar(n);
-		n++;
+		putchar(num);
+		num++;
 	}
 	putchar('\n');
+
 	return (0);
 }
