@@ -2,9 +2,12 @@
 
 /**
  * _3-islower - lowercase letter checker
- * (int c)
+ * @c: c is an int
  * Return: 1 or 0
+ * Description: checks to see if an argument is a lowercase letter.
  */
+
+
 int _islower(int c)
 {
 	if (c >= 97 && c <= 122)
