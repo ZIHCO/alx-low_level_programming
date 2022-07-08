@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _3-islower - lowercase letter checker
+ * _islower - lowercase letter checker
  * @c: c is an int
  * Return: 1 or 0
  * Description: checks to see if an argument is a lowercase letter.
