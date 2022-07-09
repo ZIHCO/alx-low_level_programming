@@ -19,30 +19,22 @@ void print_times_table(int n)
 			for (num2 = 0; num2 <= n; num2++)
 			{
 				product = num1 * num2;
-				if (product > 9)
+				if (product > 99)
 				{
-					if (product > 99)
-					{
-						hundred = product / 100;
-						tens = (product % 100) / 10;
-						unit = product % 10;
-						_putchar('0' + hundred);
-						_putchar('0' + tens);
-						_putchar('0' + unit);
-					}
-					else
-					{
-						tens = product / 10;
-						unit = (product) % 10;
-						_putchar(' ');
-						_putchar('0' + tens);
-						_putchar('0' + unit);
-					}
-					if (num2 < n)
-					{
-						_putchar(',');
-						_putchar(' ');
-					}
+					hundred = product / 100;
+					tens = (product % 100) / 10;
+					unit = product % 10;
+					_putchar('0' + hundred);
+					_putchar('0' + tens);
+					_putchar('0' + unit);
+				}
+				else if (product > 9)
+				{
+					tens = product / 10;
+					unit = (product) % 10;
+					_putchar(' ');
+					_putchar('0' + tens);
+					_putchar('0' + unit);
 				}
 				else
 				{
@@ -56,11 +48,11 @@ void print_times_table(int n)
 						_putchar(' ');
 						_putchar('0' + product);
 					}
-					if (num2 < n)
-					{
-						_putchar(',');
-						_putchar(' ');
-					}
+				}
+				if (num2 < n)
+				{
+					_putchar(',');
+					_putchar(' ');
 				}
 			}
 			_putchar('\n');
