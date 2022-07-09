@@ -16,11 +16,14 @@ void times_table(void)
 			product = num1 * num2;
 			if (product > 9)
 			{
-				tens = product / 10; unit = (product) % 10;
-				_putchar('0' + tens); _putchar('0' + unit);
+				tens = product / 10;
+				unit = (product) % 10;
+				_putchar('0' + tens);
+				_putchar('0' + unit);
 				if (num2 < 9)
 				{
-					_putchar(','); _putchar(' ');
+					_putchar(',');
+					_putchar(' ');
 				}
 			}
 			else
@@ -29,11 +32,13 @@ void times_table(void)
 					_putchar(48);
 				else
 				{
-					_putchar(' '); _putchar('0' + product);
+					_putchar(' ');
+					_putchar('0' + product);
 				}
 				if (num2 < 9)
 				{
-					_putchar(','); _putchar(' ');
+					_putchar(',');
+					_putchar(' ');
 				}
 			}
 		}
