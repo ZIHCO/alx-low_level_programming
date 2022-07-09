@@ -34,6 +34,7 @@ void print_times_table(int n)
 					{
 						tens = product / 10;
 						unit = (product) % 10;
+						_putchar(' ');
 						_putchar('0' + tens);
 						_putchar('0' + unit);
 					}
@@ -51,6 +52,7 @@ void print_times_table(int n)
 					}
 					else
 					{
+						_putchar(' ');
 						_putchar(' ');
 						_putchar('0' + product);
 					}
