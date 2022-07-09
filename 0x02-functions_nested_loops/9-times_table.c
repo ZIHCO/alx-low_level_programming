@@ -30,8 +30,15 @@ void times_table(void)
 			}
 			else
 			{
-				_putchar(' ');
-				_putchar('0' + product);
+				if (num2 == 0)
+				{
+					_putchar(48);
+				}
+				else
+				{
+					_putchar(' ');
+					_putchar('0' + product);
+				}
 				if (num2 < 9)
 				{
 					_putchar(',');
