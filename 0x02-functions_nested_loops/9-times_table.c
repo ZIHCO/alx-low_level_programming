@@ -20,30 +20,18 @@ void times_table(void)
 			{
 				tens = product / 10;
 				unit = (product) % 10;
-				_putchar('0' + tens);
-				_putchar('0' + unit);
+				_putchar('0' + tens) _putchar('0' + unit);
 				if (num2 < 9)
-				{
-					_putchar(',');
-					_putchar(' ');
-				}
+					_putchar(',') _putchar(' ');
 			}
 			else
 			{
 				if (num2 == 0)
-				{
 					_putchar(48);
-				}
 				else
-				{
-					_putchar(' ');
-					_putchar('0' + product);
-				}
+					_putchar(' ') _putchar('0' + product);
 				if (num2 < 9)
-				{
-					_putchar(',');
-					_putchar(' ');
-				}
+					_putchar(',') _putchar(' ');
 			}
 		}
 		_putchar('\n');
