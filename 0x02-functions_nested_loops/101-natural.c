@@ -15,7 +15,7 @@ int main(void)
 	{
 		sum_multiples3 += multiple3;
 	}
-	for ( multiple5 = 5; multiple5 < 1024; multiple5 += 5)
+	for (multiple5 = 5; multiple5 < 1024; multiple5 += 5)
 	{
 		if (multiple5 % 3 != 0)
 			sum_multiples5 += multiple5;
