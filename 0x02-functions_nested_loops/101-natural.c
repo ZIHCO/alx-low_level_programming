@@ -2,10 +2,10 @@
 
 /**
  * main - sum of the multiples of 3 or 5
- *
+ * Return: on success return 0
  * Description: calculate the sum of 2 integers passed as arguments
  */
-void main(void)
+int main(void)
 {
 	int sum3_5multiples, sum_multiples3, sum_multiples5, multiple3, multiple5;
 	int i, j;
@@ -30,4 +30,5 @@ void main(void)
 	}
 	sum3_5multiples = sum_multiples5 + sum_multiples3;
 	printf("%d\n", sum3_5multiples);
+	return (0);
 }
