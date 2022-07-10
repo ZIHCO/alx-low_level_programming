@@ -7,6 +7,6 @@
  */
 int main(void)
 {
-	sum_of_multiple2();
+	times_table();
 	return (0);
 }

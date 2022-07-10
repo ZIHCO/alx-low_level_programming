@@ -1,12 +1,11 @@
 #include <stdio.h>
-#include "main.h"
 
 /**
- * sum_of_multiple2 - sum of the multiples of 3 or 5
+ * main - sum of the multiples of 3 or 5
  *
  * Description: calculate the sum of 2 integers passed as arguments
  */
-void sum_of_multiple2(void)
+void main(void)
 {
 	int sum3_5multiples, sum_multiples3, sum_multiples5, multiple3, multiple5;
 	int i, j;
