@@ -13,9 +13,9 @@ int main(void)
 	i = 1;
 	num = 2;
 	incremental = 1;
-	while (i < 62)
+	while (i < 49)
 	{
-		if (i < 62)
+		if (i < 49)
 		{
 			printf("%.0f, ", incremental);
 			incremental += num;
