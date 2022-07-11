@@ -7,26 +7,28 @@
  */
 int main(void)
 {
-	long int incremental, num;
+	long int incremental, num, sum_of_even;
 
 	num = 2;
 	incremental = 1;
+	sum_of_even = 0;
 	while (num <= 4000000)
 	{
 		if (num + incremental < 4000000)
 		{
-			printf("%ld, ", incremental);
 			incremental += num;
-			printf("%ld, ", num);
 			num += incremental;
 		}
 		else
 		{
-			printf("%ld, ", incremental);
 			incremental += num;
-			printf("%ld\n", num);
 			num += incremental;
 		}
+		if (incremental % 2 == 0)
+			sum_of_even += incremental;
+		if (num % 2 == 0)
+			sum_of_even += num;
 	}
+	printf("%ld\n", sum_of_even);
 	return (0);
 }
