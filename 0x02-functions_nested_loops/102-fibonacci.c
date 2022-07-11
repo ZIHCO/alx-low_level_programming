@@ -8,25 +8,26 @@
 int main(void)
 {
 	int i;
-	float incremental, num;
+	long int incremental, num;
 
 	i = 1;
-	num = 1;
-	incremental = 0;
-	printf("%.0f, ", num);
-	while (i < 49)
+	num = 2;
+	incremental = 1;
+	while (i <= 25)
 	{
+		if (i < 25)
+		{
+			printf("%ld, ", incremental);
+			incremental += num;
+			printf("%ld, ", num);
+			num += incremental;
+		}
+		else
+		{
+			printf("%ld, ", incremental);
+			printf("%ld\n", num);
+		}
 		++i;
-		incremental += num;
-		num += incremental;
-		if (incremental != 1)
-			printf("%.0f, ", incremental);
-		printf("%.0f, ", num);
 	}
-	incremental += num;
-	num += incremental;
-	printf("%.0f, ", incremental);
-	printf("%.0f", num);
-	printf("\n");
 	return (0);
 }
