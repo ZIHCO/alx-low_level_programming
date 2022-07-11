@@ -5,7 +5,7 @@
  * Return: on success return 0
  * Description: print fibonacci starting with 1, 2
  */
-void main(void)
+int main(void)
 {
 	int i;
 	float incremental, num;
@@ -26,4 +26,5 @@ void main(void)
 	}
 	printf("%.0f, ", incremental);
 	printf("%.0f\n", num);
+	return (0);
 }
