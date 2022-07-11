@@ -14,6 +14,10 @@ int main(void)
 	sum_of_even = 0;
 	while (num <= 4000000)
 	{
+		if (incremental % 2 == 0)
+			sum_of_even += incremental;
+		if (num % 2 == 0)
+			sum_of_even += num;
 		if (num + incremental < 4000000)
 		{
 			incremental += num;
@@ -24,10 +28,6 @@ int main(void)
 			incremental += num;
 			num += incremental;
 		}
-		if (incremental % 2 == 0)
-			sum_of_even += incremental;
-		if (num % 2 == 0)
-			sum_of_even += num;
 	}
 	printf("%ld\n", sum_of_even);
 	return (0);
