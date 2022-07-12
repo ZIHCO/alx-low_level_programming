@@ -18,13 +18,10 @@ int largest_number(int a, int b, int c)
 	}
 	else if ((b > a && a > c) || (b > c && c > a))
 	{
-		printf("%d", b);
 		largest = b;
 	}
 	else
 	{
-
-		printf("%d", c);
 		largest = c;
 	}
 
