@@ -7,7 +7,8 @@
  * @n: the number of element to print
  * Description: where n is the number of elements of the array to be printed.
  * Numbers must be separated by comma, followed by a space.
- * The numbers should be displayed in the same order as they are stored in the array.
+ * The numbers should be displayed in the same order as they are stored
+ * in the array.
  */
 void print_array(int *a, int n)
 {
