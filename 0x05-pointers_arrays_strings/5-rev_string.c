@@ -19,5 +19,4 @@ void rev_string(char *s)
 		s[i] = s[k - i - 1];
 		s[k - i - 1] = tmp;
 	}
-	_putchar('\n');
 }
