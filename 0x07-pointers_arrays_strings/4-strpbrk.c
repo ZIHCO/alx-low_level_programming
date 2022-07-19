@@ -29,5 +29,7 @@ char *_strpbrk(char *s, char *accept)
 			}
 		}
 	}
+	if (k == 0)
+		return ('\0');
 	return (ps);
 }
