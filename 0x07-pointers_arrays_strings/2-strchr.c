@@ -16,7 +16,7 @@ char *_strchr(char *s, char c)
 	for (i = 0; s[i] != c; i++)
 		;
 	if (s[i] == c)
-		pcs =&s[i];
+		pcs = &s[i];
 	else
 		return ('\0');
 	return (pcs);
