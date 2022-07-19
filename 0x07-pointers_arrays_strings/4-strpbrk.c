@@ -10,10 +10,8 @@
  */
 char *_strpbrk(char *s, char *accept)
 {
-	int i, j, n, m, k;
-	char *ps;
+	int i, j, n, m;
 
-	k = 0;
 	for (i = 0; s[i]; i++)
 		;
 	for (j = 0; accept[j]; j++)
@@ -22,14 +20,12 @@ char *_strpbrk(char *s, char *accept)
 	{
 		for (m = 0; m <= j; m++)
 		{
-			if (s[n] == accept[m] && k < 1)
+			if (s[n] == accept[m])
 			{
-				ps = (s + n);
-				k++;
+				s = s + n;
+				return (s);
 			}
 		}
 	}
-	if (k == 0)
-		return ('\0');
-	return (ps);
+	return ('\0');
 }
