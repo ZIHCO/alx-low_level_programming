@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 	unsigned int j, sum;
 
 	sum = 0;
-	if (argv[1] == NULL)
+	if (argc < 1)
 	{
 		printf("%d\n", 0);
 		return (0);
@@ -36,9 +36,6 @@ int main(int argc, char *argv[])
 				return (1);
 			}
 		}
-	}
-	for (i = 1; i < argc; i++)
-	{
 		sum += atoi(argv[i]);
 	}
 	printf("%d\n", sum);
