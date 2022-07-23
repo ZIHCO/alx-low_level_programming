@@ -91,7 +91,7 @@ int main(int argc, char *argv[])
 			bal = p % 2;
 		}
 	}
-	p = p % 2;	
+	p = p % 2;
 	if (p >= 1)
 		coin += 1;
 	printf("%ld\n", coin);
