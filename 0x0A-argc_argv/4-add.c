@@ -23,12 +23,7 @@ int main(int argc, char *argv[])
 	char *p;
 
 	sum = 0;
-	if (argc <= 1)
-	{
-		printf("%d\n", 0);
-		return (0);
-	}
-	else
+	if (argc > 1)
 	{
 		for (i = 1; i < argc; i++)
 		{
@@ -45,6 +40,11 @@ int main(int argc, char *argv[])
 			p++;
 		}
 		printf("%d\n", sum);
+		return (0);
+	}
+	else
+	{
+		printf("%d\n", 0);
 		return (0);
 	}
 }
