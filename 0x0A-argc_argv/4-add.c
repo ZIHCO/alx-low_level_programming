@@ -20,6 +20,7 @@ int main(int argc, char *argv[])
 	int x, i;
 	int y;
 	unsigned int j, sum;
+	char *p;
 
 	sum = 0;
 	if (argc < 1)
@@ -31,15 +32,17 @@ int main(int argc, char *argv[])
 	{
 		for (i = 1; i < argc; i++)
 		{
-			for (j = 0; j < strlen(argv[i]); j++)
+			p = argv[i];
+			for (j = 0; j < strlen(p); j++)
 			{
-				if (argv[i][j] > 57 || argv[i][j] < 48)
+				if (!(p[j] < 58 && p[j] > 47))
 				{
 					printf("Error\n");
 					return (1);
 				}
 			}
-			sum += atoi(argv[i]);
+			sum += atoi(p);
+			p++;
 		}
 		printf("%d\n", sum);
 		return (0);
