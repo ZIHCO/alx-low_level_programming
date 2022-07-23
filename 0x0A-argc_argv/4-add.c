@@ -40,11 +40,10 @@ int main(int argc, char *argv[])
 			p++;
 		}
 		printf("%d\n", sum);
-		return (0);
 	}
 	else
 	{
 		printf("%d\n", 0);
-		return (0);
 	}
+	return (0);
 }
