@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 	if (argv[1] == NULL)
 	{
 		printf("%d\n", 0);
-		return (1);
+		return (0);
 	}
 	for (i = 1; i < argc; i++)
 	{
