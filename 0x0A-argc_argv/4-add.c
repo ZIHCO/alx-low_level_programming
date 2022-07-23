@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
 			p = argv[i];
 			for (j = 0; j < strlen(p); j++)
 			{
-				if (!(p[j] < 58 && p[j] > 47))
+				if (p[j] > 57 || p[j] < 48)
 				{
 					printf("Error\n");
 					return (1);
