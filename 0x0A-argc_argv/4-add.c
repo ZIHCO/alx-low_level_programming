@@ -16,32 +16,30 @@
  */
 int main(int argc, char *argv[])
 {
-	int x, i;
-	int y;
+	int x, i, j;
+	int y, sum;
 
+	sum = 0;
 	if (argv[1] == NULL)
 	{
 		printf("%d\n", 0);
 		return (1);
 	}
-	for (i = 0; argv[1][i] != '\0'; i++)
+	for (i = 1; i < argc; i++)
 	{
-		if (!(argv[1][i] < 57 && argv[1][i] > 47))
+		for (j = 0; argv[i][j] != '\0'; j++)
 		{
-			printf("Error\n");
-			return (1);
+			if (!(argv[i][j] < 58 && argv[i][j] > 47))
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
 	}
-	for (i = 0; argv[2][i] != '\0'; i++)
+	for (i = 1; i < argc; i++)
 	{
-		if (!(argv[2][i] < 57 && argv[2][i] > 47))
-		{
-			printf("Error\n");
-			return (1);
-		}
+		sum += atoi(argv[i]);
 	}
-	x = atoi(argv[1]);
-	y = atoi(argv[2]);
-	printf("%d\n", x + y);
+	printf("%d\n", sum);
 	return (0);
 }
