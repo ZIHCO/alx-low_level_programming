@@ -17,8 +17,7 @@
  */
 int main(int argc, char *argv[])
 {
-	char p;
-	long int bal, coin;
+	long int bal, coin, p;
 
 	bal = 0;
 	coin = 0;
@@ -57,7 +56,7 @@ int main(int argc, char *argv[])
 			bal = p % 10;
 		}
 	}
-	p = p % 10;	
+	p = p % 10;
 	if (p >= 5)
 	{
 		if (p % 5 == 0 && bal == 0)
