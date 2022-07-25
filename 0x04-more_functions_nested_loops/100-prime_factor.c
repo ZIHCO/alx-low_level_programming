@@ -22,4 +22,4 @@ int main(void)
 	}
 	printf("%lu\n", gf);
 	return (0);
-}	
+}
