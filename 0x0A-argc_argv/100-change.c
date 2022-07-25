@@ -49,8 +49,8 @@ int main(int argc, char *argv[])
 		}
 		if (p == 1)
 		{
-			coin += 1;
-			break;
+			coin++;
+			p = p - 1;
 		}
 	}
 	printf("%ld\n", coin);
