@@ -17,8 +17,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int x, i;
-	int y;
+	int i;
 	unsigned int j, sum;
 	char *p;
 
