@@ -11,8 +11,6 @@
  * followed by a new line.
  * If one of the number contains symbols that are not digits,
  * print Error, followed by a new line, and return 1.
- * You can assume that numbers and the addition of all the
- * numbers can be stored in an int.
  */
 int main(int argc, char *argv[])
 {
@@ -52,6 +50,7 @@ int main(int argc, char *argv[])
 			coin++;
 			p = p - 1;
 		}
+		break;
 	}
 	printf("%ld\n", coin);
 	return (0);
