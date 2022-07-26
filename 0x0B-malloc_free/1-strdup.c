@@ -16,7 +16,7 @@
 char *_strdup(char *str)
 {
 	char *pstr;
-	long unsigned int i, j;
+	unsigned long int i, j;
 
 	if (str == NULL)
 		return (NULL);
