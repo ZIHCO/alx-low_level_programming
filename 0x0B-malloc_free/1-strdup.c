@@ -21,9 +21,9 @@ char *_strdup(char *str)
 	if (str == NULL)
 		return (NULL);
 	i = strlen(str);
-	if (i > sizeof(pstr))
+	pstr = malloc(sizeof(char) * i + 1);
+	if (pstr == NULL)
 		return (NULL);
-	pstr = malloc(sizeof(char) * i);
 	j = 0;
 	while (j <= i)
 	{
