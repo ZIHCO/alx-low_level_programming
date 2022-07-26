@@ -19,12 +19,12 @@ char *create_array(unsigned int size, char c)
 		return (NULL);
 	pc = malloc(sizeof(*pc) * size);
 	i = 0;
+	if (pc == NULL)
+		return (NULL);
 	while (i < size)
 	{
 		pc[i] = c;
 		i++;
 	}
-	if (pc == NULL)
-		return (NULL);
 	return (pc);
 }
