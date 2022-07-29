@@ -32,8 +32,8 @@ int **alloc_grid(int width, int height)
 			for (j = i; 0 <= j; j--)
 			{
 				free(pa[j]);
-				return (NULL);
 			}
+			return (NULL);
 		}
 	}
 	for (i = 0; i < height; i++)
