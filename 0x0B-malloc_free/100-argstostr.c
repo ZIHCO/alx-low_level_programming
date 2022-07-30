@@ -25,7 +25,6 @@ char *argstostr(int ac, char **av)
 			avlen += 1;
 		}
 	}
-	printf("%d", avlen);
 	if (ac == 0 || av == NULL)
 		return (NULL);
 	pav = malloc((sizeof(char) * avlen) + ac + 1);
