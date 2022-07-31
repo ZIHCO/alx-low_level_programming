@@ -37,6 +37,8 @@ char **strtow(char *str)
 		i++;
 	}
 	pstr = malloc(sizeof(char *) * wc + 1);
+	if (pstr == NULL)
+		return (NULL);
 	while (str[j])
 	{
 		if (str[j] != ' ')
