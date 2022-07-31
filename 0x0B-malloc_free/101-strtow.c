@@ -28,6 +28,8 @@ char **strtow(char *str)
 	wlen = 0;
 	j = 0;
 	h = 0;
+	if (str == NULL)
+		return (NULL);
 	while (str[i])
 	{
 		if (str[i] != ' ')
