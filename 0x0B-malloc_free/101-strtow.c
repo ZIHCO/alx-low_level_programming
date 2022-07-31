@@ -51,7 +51,6 @@ char **strtow(char *str)
 			pstr[h] = malloc(sizeof(char) * wlen + 1);
 			for (i = j - wlen, k = 0; i <= j; k++, i++)
 				pstr[h][k] = str[i];
-			pstr[h][k] = '\0';
 			wlen = 0;
 			h++;
 		}
