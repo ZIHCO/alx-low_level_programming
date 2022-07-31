@@ -54,9 +54,13 @@ char **strtow(char *str)
 				wlen += 1;
 				j++;
 			}
-			pstr[h] = malloc(sizeof(char) * wlen + 1);
+			pstr[h] = malloc(sizeof(char) * wlen);
+			printf("%d", j - wlen);
 			for (i = j - wlen, k = 0; i <= j; k++, i++)
+			{
+				printf("%c", str[i]);
 				pstr[h][k] = str[i];
+			}
 			wlen = 0;
 			h++;
 		}
