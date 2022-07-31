@@ -38,6 +38,8 @@ char **strtow(char *str)
 			wc += 1;
 		i++;
 	}
+	if (str[0] != ' ')
+		wc += 1;
 	if (charlen == 0)
 		return (NULL);
 	pstr = malloc(sizeof(char *) * wc);
