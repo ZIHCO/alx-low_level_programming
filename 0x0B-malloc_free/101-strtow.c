@@ -28,7 +28,6 @@ char **strtow(char *str)
 	wlen = 0;
 	j = 0;
 	h = 0;
-	k = 0;
 	while (str[i])
 	{
 		if (str[i] != ' ')
@@ -48,17 +47,13 @@ char **strtow(char *str)
 				j++;
 			}
 			pstr[h] = malloc(sizeof(char) * wlen + 1);
-			for (i = j - wlen; i <= j; i++)
-			{
+			for (i = j - wlen, k = 0; i <= j; k++, i++)
 				pstr[h][k] = str[i];
-				k++;
-			}
 			pstr[h][k] = '\0';
 			wlen = 0;
 			h++;
 		}
 		j++;
-		k = 0;
 	}
 	pstr[h] = '\0';
 	return (pstr);
