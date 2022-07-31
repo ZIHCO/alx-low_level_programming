@@ -36,6 +36,8 @@ char **strtow(char *str)
 			wc += 1;
 		i++;
 	}
+	if (charlen == 0)
+		return (NULL);
 	pstr = malloc(sizeof(char *) * wc);
 	if (pstr == NULL)
 		return (NULL);
