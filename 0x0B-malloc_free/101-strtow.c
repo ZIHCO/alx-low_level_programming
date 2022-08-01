@@ -56,7 +56,6 @@ char **strtow(char *str)
 				wlen += 1;
 				j++;
 			}
-			printf("%d\n", wlen);
 			pstr[h] = malloc(sizeof(char) * wlen);
 			for (i = j - wlen, k = 0; i < j; i++, k++)
 				pstr[h][k] = str[i];
