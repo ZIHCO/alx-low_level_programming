@@ -42,7 +42,7 @@ char **strtow(char *str)
 		wc += 2;
 	if (charlen == 0)
 		return (NULL);
-	pstr = malloc(sizeof(char *) * wc);
+	pstr = malloc(sizeof(char *) * wc + 1);
 	if (pstr == NULL)
 		return (NULL);
 	while (str[j] && h < wc)
@@ -57,7 +57,7 @@ char **strtow(char *str)
 				j++;
 			
 			}
-			pstr[h] = malloc(sizeof(char) * wlen + 1);
+			pstr[h] = malloc(sizeof(char) * wlen);
 			for (i = j - wlen, k = 0; i < j; i++, k++)
 				pstr[h][k] = str[i];
 			pstr[h][k + 1] = '\0';
