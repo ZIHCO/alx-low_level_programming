@@ -42,7 +42,7 @@ char **strtow(char *str)
 		wc += 2;
 	if (charlen == 0)
 		return (NULL);
-	pstr = malloc(sizeof(char *) * wc + 1);
+	pstr = malloc(sizeof(char *) * wc);
 	if (pstr == NULL)
 		return (NULL);
 	while (str[j] && h < wc - 1)
