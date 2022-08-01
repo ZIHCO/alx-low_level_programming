@@ -22,21 +22,18 @@ char **strtow(char *str)
 	int charlen; /* character length */
 	int i, k, j, h, wlen;
 
-	i = 0;
 	wc = 0;
 	charlen = 0;
 	wlen = 0;
-	j = 0;
 	h = 0;
 	if (str == NULL)
 		return (NULL);
-	while (str[i])
+	for (i = 0; str[i]; i++)
 	{
 		if (str[i] != ' ')
 			charlen += 1;
 		else if (str[i] == ' ' && str[i + 1] != ' ')
 			wc += 1;
-		i++;
 	}
 	if (str[0] != ' ')
 		wc += 2;
@@ -45,18 +42,12 @@ char **strtow(char *str)
 	pstr = malloc(sizeof(char *) * wc);
 	if (pstr == NULL)
 		return (NULL);
-	while (str[j] && h < wc - 1)
+	for (j = 0; str[j] && h < wc - 1; j++)
 	{
 		if (str[j] != ' ')
 		{
-			while (str[j] != ' ')
-			{
-				if (str[j] == '\0')
-					break;
+			for (; str[j] != ' '; j++)
 				wlen += 1;
-				j++;
-			
-			}
 			pstr[h] = malloc(sizeof(char) * wlen + 1);
 			for (i = j - wlen, k = 0; i < j; i++, k++)
 				pstr[h][k] = str[i];
@@ -64,7 +55,6 @@ char **strtow(char *str)
 			wlen = 0;
 			h += 1;
 		}
-		j++;
 	}
 	return (pstr);
 }
