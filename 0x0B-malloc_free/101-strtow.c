@@ -51,15 +51,18 @@ char **strtow(char *str)
 		{
 			while (str[j] != ' ')
 			{
+				if (str[j] == '\0')
+					break;
 				wlen += 1;
 				j++;
 			}
+			printf("%d\n", wlen);
 			pstr[h] = malloc(sizeof(char) * wlen);
-			for (i = j - wlen, k = 0; i <= j; i++, k++)
+			for (i = j - wlen, k = 0; i < j; i++, k++)
 				pstr[h][k] = str[i];
-			pstr[h][k] = '\0';
+			pstr[h][k + 1] = '\0';
 			wlen = 0;
-			h++;
+			h += 1;
 		}
 		j++;
 	}
