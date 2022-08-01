@@ -39,13 +39,13 @@ char **strtow(char *str)
 		i++;
 	}
 	if (str[0] != ' ')
-		wc += 1;
+		wc += 2;
 	if (charlen == 0)
 		return (NULL);
 	pstr = malloc(sizeof(char *) * wc);
 	if (pstr == NULL)
 		return (NULL);
-	while (str[j])
+	while (str[j] && h < wc)
 	{
 		if (str[j] != ' ')
 		{
@@ -55,15 +55,14 @@ char **strtow(char *str)
 				j++;
 			}
 			pstr[h] = malloc(sizeof(char) * wlen);
-			for (i = j - wlen, k = 0; i <= j; k++, i++)
-			{
+			for (i = j - wlen, k = 0; i <= j; i++, k++)
 				pstr[h][k] = str[i];
-			}
+			pstr[h][k] = '\0';
 			wlen = 0;
 			h++;
 		}
 		j++;
 	}
-	pstr[h] = '\0';
+	pstr[h] = NULL;
 	return (pstr);
 }
