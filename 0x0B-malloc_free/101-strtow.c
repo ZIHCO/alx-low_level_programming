@@ -66,6 +66,5 @@ char **strtow(char *str)
 		}
 		j++;
 	}
-	pstr[h] = '\0';
 	return (pstr);
 }
