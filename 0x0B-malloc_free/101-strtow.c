@@ -57,13 +57,15 @@ char **strtow(char *str)
 				j++;
 			
 			}
-			pstr[h] = malloc(sizeof(char) * wlen);
+			pstr[h] = malloc(sizeof(char) * wlen + 1);
 			for (i = j - wlen, k = 0; i < j; i++, k++)
 				pstr[h][k] = str[i];
+			pstr[h][k + 1] = '\0';
 			wlen = 0;
 			h += 1;
 		}
 		j++;
 	}
+	pstr[h] = '\0';
 	return (pstr);
 }
