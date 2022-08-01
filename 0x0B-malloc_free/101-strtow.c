@@ -46,6 +46,8 @@ char **strtow(char *str)
 	{
 		if (str[j] != ' ')
 		{
+			if (str[j] == '\0')
+				break;
 			for (; str[j] != ' '; j++)
 				wlen += 1;
 			pstr[h] = malloc(sizeof(char) * wlen + 1);
