@@ -9,7 +9,6 @@
  * Description: a dog's attributes
  */
 
-#define NULL ((void *)0)
 struct dog
 {
 	char *name;
