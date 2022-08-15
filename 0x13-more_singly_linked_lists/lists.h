@@ -1,6 +1,8 @@
 #ifndef _HEADER_
 #define _HEADER_
 
+
+typedef __SIZE_TYPE__ size_t;
 /**
  * struct listint_s - singly linked list
  * @n: integer
@@ -9,7 +11,6 @@
  * Description: singly linked node structure
  *
  */
-typedef __SIZE_TYPE__ size_t;
 typedef struct listint_s
 {
 	int n;
