@@ -55,5 +55,7 @@ int isbinary(const char *b)
 		else
 			return (0);
 	}
-	return (1);
+	if (i > 0)
+		return (1);
+	return (0);
 }
