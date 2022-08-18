@@ -48,6 +48,8 @@ int isbinary(const char *b)
 {
 	int i = 0;
 
+	if (b == NULL)
+		return (0);
 	while (b[i])
 	{
 		if (b[i] >= 48 && b[i] <= 49)
@@ -55,7 +57,5 @@ int isbinary(const char *b)
 		else
 			return (0);
 	}
-	if (i > 0)
-		return (1);
-	return (0);
+	return (1);
 }
