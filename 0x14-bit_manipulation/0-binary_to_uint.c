@@ -8,37 +8,17 @@
 unsigned int binary_to_uint(const char *b)
 {
 	int i = 0;
-	int power = _strlen(b) - 1;
 	unsigned int number = 0;
-	unsigned int placeval = 1;
 	int lastindex = _strlen(b) - 1;
-	int j = 0;
 
 	if (isbinary(b) == 0)
 		return (number);
 
-	for (i = 0; i <= lastindex && b; i++)
+	for (i = 0; lastindex >= 0 && b; i++)
 	{
-		if (lastindex == i)
-		{
-			if (b[i] == '1')
-				number += 1;
-			return (number);
-		}
-		else if (b[i] == '0')
-			power -= 1;
-		else
-		{
-			while (j < power)
-			{
-				placeval *= 2;
-				j++;
-			}
-			j = 0;
-			number += placeval;
-			placeval = 1;
-			power -= 1;
-		}
+		if (b[lastindex] == '1')
+			number += 1 << i;
+		lastindex--;
 	}
 	return (number);
 }
