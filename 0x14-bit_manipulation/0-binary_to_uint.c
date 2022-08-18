@@ -16,8 +16,9 @@ unsigned int binary_to_uint(const char *b)
 	int j = 0;
 
 	if (isbinary(b) == 0)
-		return (0);
-	for (i = 0; b[i] && b != NULL; i++)
+		return (number);
+
+	for (i = 0; i <= lastindex; i++)
 	{
 		if (lastindex == i)
 		{
@@ -40,7 +41,7 @@ unsigned int binary_to_uint(const char *b)
 			power -= 1;
 		}
 	}
-	return (0);
+	return (number);
 }
 
 /**
