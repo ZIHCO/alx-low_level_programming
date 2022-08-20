@@ -30,7 +30,7 @@ int set_bit(unsigned long int *n, unsigned int index)
 		*n = m + 1;
 		return (1);
 	}
-	if (m > 0 && index > 0)
+	if (m > 0 && index > 0 && index < 63)
 	{
 		while (i < 63)
 		{
