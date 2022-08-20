@@ -19,7 +19,7 @@ int clear_bit(unsigned long int *n, unsigned int index)
 		{
 			m = m >> 1;
 			b = m & 1;
-			if (i = index)
+			if (i == index)
 				sum += 0 << index;
 			else
 				sum += b << i
