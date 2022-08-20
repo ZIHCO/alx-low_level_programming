@@ -12,7 +12,6 @@ int clear_bit(unsigned long int *n, unsigned int index)
 	unsigned long int sum = 0;
 	unsigned int i = 0;
 	int b = 0;
-	unsigned int bits = bitsize(m);
 
 	if (m > 0 && index == 0)
 	{
