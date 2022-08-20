@@ -22,7 +22,7 @@ int clear_bit(unsigned long int *n, unsigned int index)
 			if (i == index)
 				sum += 0 << index;
 			else
-				sum += b << i
+				sum += b << i;
 		}
 		*n = sum;
 		return (1);
