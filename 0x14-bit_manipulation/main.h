@@ -10,5 +10,6 @@ void rightshift(unsigned long int n);
 int get_bit(unsigned long int n, unsigned int index);
 int set_bit(unsigned long int *n, unsigned int index);
 unsigned int bitsize(unsigned long int n);
+int clear_bit(unsigned long int *n, unsigned int index);
 
 #endif
