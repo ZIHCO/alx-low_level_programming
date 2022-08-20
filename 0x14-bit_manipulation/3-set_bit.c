@@ -13,40 +13,55 @@ int set_bit(unsigned long int *n, unsigned int index)
 	unsigned long int sum = 0;
 	unsigned int i = 0;
 	int b = 0;
+	unsigned int bits = bitsize(m);
 
-	if (m == 0 && index > 0)
-	{
-		while (i < 63)
-		{
-			if (i == index)
-				sum += 1 << i;
-			i++;
-		}
-		*n = sum;
-		return (1);
-	}
 	if (m > 0 && index == 0)
 	{
 		*n = m + 1;
 		return (1);
 	}
-	if (m > 0 && index > 0 && index < 63)
+	if (bits > index)
 	{
-		while (i < 63)
+		for (i = 1; m; i++)
 		{
-			if (m && i != index)
-			{
-				m = m >> 1;
-				b = m & 1;
-				sum += b << i;
-			}
+			m = m >> 1;
+			b = m & 1;
 			if (i == index)
 				sum += 1 << index;
-			i++;
+			else
+				sum += b << i;
 		}
-
+		*n = sum;
+		return (1);
+	}
+	if (bits < index)
+	{
+		sum = (1 << index);
+		for (i = 1; m; i++)
+		{
+			m = m >> 1;
+			b = m & 1;
+			sum += (b << i);
+		}
 		*n = sum;
 		return (1);
 	}
 	return (-1);
+}
+
+/**
+ * bitsize - get the size the bit size
+ * @n: an integer
+ * Return: the bit size
+ */
+unsigned int bitsize(unsigned long int n)
+{
+	int i = 0;
+
+	while (n)
+	{
+		n = n >> 1;
+		i++;
+	}
+	return (i);
 }
