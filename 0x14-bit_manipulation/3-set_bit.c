@@ -16,7 +16,7 @@ int set_bit(unsigned long int *n, unsigned int index)
 
 	if (m == 0 && index > 0)
 	{
-		while (i < 31)
+		while (i < 63)
 		{
 			if (i == index)
 				sum += 1 << i;
@@ -32,7 +32,7 @@ int set_bit(unsigned long int *n, unsigned int index)
 	}
 	if (m > 0 && index > 0)
 	{
-		while (i < 31)
+		while (i < 63)
 		{
 			if (m && i != index)
 			{
