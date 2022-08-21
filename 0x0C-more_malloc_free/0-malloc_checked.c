@@ -13,6 +13,5 @@ void *malloc_checked(unsigned int b)
 	store = malloc(b);
 	if (store == NULL)
 		exit(98);
-	store = &b;
 	return (store);
 }
