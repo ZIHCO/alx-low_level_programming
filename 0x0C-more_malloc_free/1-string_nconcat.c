@@ -39,7 +39,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 				str[k + i] = s2[i];
 		}
 	}
-	else if (s2len == n)
+	else
 	{
 		for (i = 0; s2[i]; i++)
 			str[k + i] = s2[i];
