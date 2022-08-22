@@ -45,7 +45,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	else
 	{
 		while (s2[i])
+		{
 			str[k + i] = s2[i];
+			i++;
+		}
 	}
 	return (str);
 }
