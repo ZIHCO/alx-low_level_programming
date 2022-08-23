@@ -9,7 +9,7 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd = open(filename, O_RDONLY, 0700);
+	int fd = open(filename, O_RDONLY, 0600);
 	char *buff = malloc(sizeof(char *) * letters);
 	ssize_t actual_count;
 
