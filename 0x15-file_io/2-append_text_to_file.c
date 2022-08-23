@@ -11,6 +11,7 @@ int append_text_to_file(const char *filename, char *text_content)
 {
 	int fd;
 	int count = _strlen(text_content);
+	int actual_count;
 
 	if (filename == NULL)
 		return (-1);
@@ -18,7 +19,9 @@ int append_text_to_file(const char *filename, char *text_content)
 	if (fd == -1)
 		return (-1);
 	if (text_content)
-		write(fd, text_content, count);
+		actual_count = write(fd, text_content, count);
+	if (actual_count == -1)
+		return (-1);
 	close(fd);
 	return (1);
 }
