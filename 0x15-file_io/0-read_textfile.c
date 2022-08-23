@@ -20,11 +20,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (fd == -1)
 		return (0);
 	actual_count = read(fd, buff, letters);
-	buff[actual_count + 1] = '\0';
 
-	write(STDOUT_FILENO, buff, (actual_count + 1));
+	write(STDOUT_FILENO, buff, actual_count);
 	free(buff);
 	close(fd);
 
-	return (actual_count + 1);
+	return (actual_count);
 }
