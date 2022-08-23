@@ -10,7 +10,7 @@
 int append_text_to_file(const char *filename, char *text_content)
 {
 	int fd;
-	int count = _strlen(text_content) + 1;
+	int count = _strlen(text_content);
 	int actual_count;
 
 	if (filename == NULL)
