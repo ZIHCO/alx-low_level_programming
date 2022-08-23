@@ -46,5 +46,5 @@ int main(int argc, char **argv)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fdc);
 		exit(100);
 	}
-	exit(0);
+	return (0);
 }
