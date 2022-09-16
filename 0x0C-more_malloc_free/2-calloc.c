@@ -9,10 +9,14 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	int *mem = malloc((nmemb + 1) * size);
+	int *mem = NULL;
 
-	if (mem == NULL)
-		return (NULL);
-	mem[nmemb] = '\0';
+	if (nmemb != 0 && size != 0)
+	{
+		mem = malloc((nmemb + 1) * size);
+		if (mem == NULL)
+			return (NULL);
+		mem[nmemb] = '\0';
+	}
 	return (mem);
 }
