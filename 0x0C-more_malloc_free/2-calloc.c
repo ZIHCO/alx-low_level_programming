@@ -13,5 +13,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	if (mem == NULL)
 		return (NULL);
+	mem[nmemb] = '\0';
 	return (mem);
 }
