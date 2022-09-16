@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdlib.h>
-#include <stdio.h>
 
 /**
  * string_nconcat - concatenates two strings.
@@ -13,7 +12,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int i;
 	unsigned int k = 0;
-	char *str = NULL;
+	char *str;
 
 	if (s1 == NULL && s2 != NULL)
 		str = emptys1(s2, n);
@@ -44,6 +43,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		else
 			str = smaller_n(s1, s2, n);
 	}
+	else
+	{
+		str = _malloc(n);
+		str[k] = '\0';
+	}
 	return (str);
 }
 
@@ -73,10 +77,10 @@ char *emptys1(char *str, unsigned int n)
 	char *newstr = NULL;
 	unsigned int k;
 
-	if (n <= (_strlen(str)))
+	if (n < (_strlen(str)))
 	{
 		newstr = _malloc((n + 1));
-		for (k = 0; (k <= n) && newstr != NULL; k++)
+		for (k = 0; (k < n) && newstr != NULL; k++)
 			newstr[k] = str[k];
 		newstr[k] = '\0';
 	}
@@ -117,16 +121,19 @@ char *smaller_n(char *s1, char *s2, unsigned int n)
 	int k = 0;
 	unsigned int i;
 
-	for (i = 0; (i < (_strlen(s1) + n + 1)) && newstr != NULL; i++)
+	if (newstr != NULL)
 	{
-		if (i < (_strlen(s1)))
-			newstr[i] = s1[i];
-		else
+		for (i = 0; (i < (_strlen(s1) + n)); i++)
 		{
-			(newstr[i] = s2[k]);
-			k++;
+			if (i < (_strlen(s1)))
+				newstr[i] = s1[i];
+			else
+			{
+				(newstr[i] = s2[k]);
+				k++;
+			}
 		}
+		newstr[i] = '\0';
 	}
-	newstr[i] = '\0';
 	return (newstr);
 }
