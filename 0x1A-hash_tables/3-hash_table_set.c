@@ -10,7 +10,7 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	hash_node_t *node;
-	unsigned long int hashcode, size, idx;
+	unsigned long int size, idx;
 
 	if (ht && strlen(key) > 0)
 	{
@@ -21,9 +21,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		node->value = strdup(value);
 		node->next = NULL;
 
-		hashcode = hash_djb2((unsigned char *) key);
 		size = ht->size;
-		idx = hashcode % size;
+		idx = key_index((unsigned char *) key, size);
 
 		if (ht->array[idx] == NULL)
 		{
