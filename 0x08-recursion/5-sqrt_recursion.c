@@ -14,7 +14,7 @@ int _sqrt_recursion(int n)
 
 	if (n > 1)
 	{
-		half = n / 2;
+		half = 2;
 
 		return (find_root(half, n));
 	}
@@ -31,10 +31,10 @@ int _sqrt_recursion(int n)
  */
 int find_root(int i, int k)
 {
-	if (i == 1)
+	if (i == k)
 		return (-1);
 	if (k == i * i)
 		return (i);
-	i = i - 1;
+	i = i + 1;
 	return (find_root(i, k));
 }
