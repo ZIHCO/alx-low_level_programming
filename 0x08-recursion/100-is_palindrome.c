@@ -81,10 +81,11 @@ int strncomp(int i, char *s1, char *s2)
 }
 
 /**
- * rversal - reverse this string
+ * reversal - reverse this string
  * @i: counter
  * @s: string
  * @s1: malloc
+ * Return: gnirts
  */
 
 char *reversal(int i, char *s, char *s1)
