@@ -17,7 +17,7 @@
  */
 int _atoi(char *s)
 {
-	int j = 1;
+	int sign = 1;
 	int i = 0;
 	int number = 0;
 
@@ -25,7 +25,7 @@ int _atoi(char *s)
 	{
 		if (s[i] == '-')
 		{
-			j *= -1;
+			sign *= -1;
 		}
 		else if (s[i] >= 48 && s[i] <= 57)
 		{
@@ -34,15 +34,19 @@ int _atoi(char *s)
 				if (number == 0)
 				{
 					number += int_value(s[i]);
+					number *= sign;
 				}
 				else
 				{
 					number *= 10;
-					number += int_value(s[i]);
+					if (number > 0)
+						number += int_value(s[i]);
+					else
+						number -= int_value(s[i]);
 				}
 				i++;
 			}
-			return (number * j);
+			return (number);
 		}
 		i++;
 	}
