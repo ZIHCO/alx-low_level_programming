@@ -18,42 +18,71 @@
  */
 int _atoi(char *s)
 {
-	int len, i, digits, multiplier, k, sum, sign;
-	int n; /* the power of 10 to multiply by */
-	int num; /* length before the first number */
+        int j = 1;
+        int i;
+        int number = 0;
 
-	n = 0;
-	sum = 0;
-	multiplier = 1;
-	sign = 0;
-	for (len = 0; s[len] != '\0'; len++)
-	{
-	}
-	for (num = 0; !(s[num] >= '0' && s[num] <= '9'); num++)
-	{
-		if (s[num] == '-')
-			sign++;
-	}
-	for (i = num + 1; s[i] >= '0' && s[i] <= '9'; i++)
-		n += 1;
-	if (len - num == 0)
-	{
-		return (0);
-	}
-	else
-	{
-		for (k = num; n >= 0; k++)
-		{
-			digits = s[k] - 48;
-			for (i = 1; n >= i; i++)
-				multiplier *= 10;
-			digits = digits * multiplier;
-			sum += digits;
-			n--;
-			multiplier = 1;
-		}
-		if (sign % 2 != 0)
-			sum = -1 * sum;
-		return (sum);
-	}
+        for (i = 0; i < _strlen(s); i++)
+        {
+                if (s[i] == '+')
+                {
+                        continue;
+                }
+                else if (s[i] == '-')
+                {
+                        j *= -1;
+                }
+                else if (s[i] >= 48 && s[i] <= 57)
+                {
+                        while (s[i] >= 48 && s[i] <= 57)
+                        {
+                                if (number == 0)
+                                {
+                                        number += int_value(s[i]);
+                                }
+                                else
+                                {
+                                        number *= 10;
+                                        number += int_value(s[i]);
+                                }
+                                i++;
+                        }
+                        return (number * j);
+                }
+        }
+        return (0);
+}
+
+
+/**
+ * int_value - convert char to int
+ * @c: char
+ * Return: int
+ */
+
+int int_value(char c)
+{
+        switch (c)
+        {
+                case (49):
+                        return (1);
+                case (50):
+                        return (2);
+                case (51):
+                        return (3);
+                case (52):
+                        return (4);
+                case (53):
+                        return (5);
+                case (54):
+                        return (6);
+                case (55):
+                        return (7);
+                case (56):
+                        return (8);
+                case (57):
+                        return (9);
+                default:
+                        return (0);
+        }
 }
