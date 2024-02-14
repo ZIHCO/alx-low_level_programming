@@ -17,36 +17,36 @@
  */
 int _atoi(char *s)
 {
-        int j = 1;
-        int i = 0;
-        int number = 0;
+	int j = 1;
+	int i = 0;
+	int number = 0;
 
-        while (s[i] != '\0')
-        {
-                if (s[i] == '-')
-                {
-                        j *= -1;
-                }
-                else if (s[i] >= 48 && s[i] <= 57)
-                {
-                        while (s[i] >= 48 && s[i] <= 57)
-                        {
-                                if (number == 0)
-                                {
-                                        number += int_value(s[i]);
-                                }
-                                else
-                                {
-                                        number *= 10;
-                                        number += int_value(s[i]);
-                                }
-                                i++;
-                        }
-                        return (number * j);
-                }
+	while (s[i] != '\0')
+	{
+		if (s[i] == '-')
+		{
+			j *= -1;
+		}
+		else if (s[i] >= 48 && s[i] <= 57)
+		{
+			while (s[i] >= 48 && s[i] <= 57)
+			{
+				if (number == 0)
+				{
+					number += int_value(s[i]);
+				}
+				else
+				{
+					number *= 10;
+					number += int_value(s[i]);
+				}
+				i++;
+			}
+			return (number * j);
+		}
 		i++;
-        }
-        return (0);
+	}
+	return (0);
 }
 
 
@@ -58,27 +58,27 @@ int _atoi(char *s)
 
 int int_value(char c)
 {
-        switch (c)
-        {
-                case (49):
-                        return (1);
-                case (50):
-                        return (2);
-                case (51):
-                        return (3);
-                case (52):
-                        return (4);
-                case (53):
-                        return (5);
-                case (54):
-                        return (6);
-                case (55):
-                        return (7);
-                case (56):
-                        return (8);
-                case (57):
-                        return (9);
-                default:
-                        return (0);
-        }
+	switch (c)
+	{
+		case (49):
+			return (1);
+		case (50):
+			return (2);
+		case (51):
+			return (3);
+		case (52):
+			return (4);
+		case (53):
+			return (5);
+		case (54):
+			return (6);
+		case (55):
+			return (7);
+		case (56):
+			return (8);
+		case (57):
+			return (9);
+		default:
+			return (0);
+	}
 }
