@@ -18,16 +18,12 @@
 int _atoi(char *s)
 {
         int j = 1;
-        int i;
+        int i = 0;
         int number = 0;
 
-        for (i = 0; i < _strlen(s); i++)
+        while (s[i] != '\0')
         {
-                if (s[i] == '+')
-                {
-                        continue;
-                }
-                else if (s[i] == '-')
+                if (s[i] == '-')
                 {
                         j *= -1;
                 }
@@ -48,6 +44,7 @@ int _atoi(char *s)
                         }
                         return (number * j);
                 }
+		i++;
         }
         return (0);
 }
