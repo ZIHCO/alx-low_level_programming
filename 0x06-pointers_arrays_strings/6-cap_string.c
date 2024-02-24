@@ -10,10 +10,11 @@ char *cap_string(char *s)
 {
 	int i = 0;
 
-	s[0] = s[0] -32;
 	while (s[i] != '\0')
 	{
-		if ((s[i] >= 97 && s[i] <= 122) && seperator_identifier((i - 1), s))
+		if (i == 0 && (s[i] >= 97 && s[i] <= 122))
+			s[i] = s[i] - 32;
+		else if ((s[i] >= 97 && s[i] <= 122) && seperator_identifier((i - 1), s))
 			s[i] = s[i] - 32;
 		i++;
 	}
