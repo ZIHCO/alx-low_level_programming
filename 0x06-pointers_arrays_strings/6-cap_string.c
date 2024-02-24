@@ -36,6 +36,7 @@ int seperator_identifier(int n, char *s)
 		case '\n':
 			return (1);
 		case '\t':
+			s[n] = ' ';
 			return (1);
 		case ',':
 			return (1);
