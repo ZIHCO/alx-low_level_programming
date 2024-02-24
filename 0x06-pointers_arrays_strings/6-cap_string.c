@@ -29,7 +29,7 @@ char *cap_string(char *s)
 
 int seperator_identifier(int n, char *s)
 {
-	switch(s[n])
+	switch (s[n])
 	{
 		case ' ':
 			return (1);
