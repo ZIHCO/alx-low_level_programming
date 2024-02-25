@@ -31,5 +31,5 @@ char *rot13(char *s)
 				s[i] = letter13[j];
 		}
 	}
-	reurn s;
+	return (s);
 }
