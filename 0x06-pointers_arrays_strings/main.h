@@ -12,6 +12,6 @@ int seperator_identifier(int n, char *s);
 char *leet(char *s);
 char *rot13(char *s);
 void print_number(int n);
-char _putchar(char s);
+int _putchar(char s);
 
 #endif
