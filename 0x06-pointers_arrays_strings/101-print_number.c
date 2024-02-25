@@ -9,19 +9,23 @@
 void print_number(int n)
 {
 	int power10 = 10;
-	int new = n;
+	int new;
 
 	if (n < 0)
 	{
 		n *= -1;
 		_putchar('-');
 	}
-	while (n > power10)
-		power10 *= 10;
-
-	while (new != 0)
+	else if (n == 0)
 	{
-		_putchar((new / power10 + 48));
+		_putchar('0');
+	}
+	while (n / 10 > power10)
+		power10 *= 10;
+	new = n;
+	while (new > 0)
+	{
+		_putchar((new / power10) + 48);
 		new = new % power10;
 		power10 /= 10;
 	}
