@@ -45,7 +45,10 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		return (0);
 	}
 	*(r + count + 1) = '\0';
-	return (reverse_str(r));
+	r = reverse_str(r);
+	if (r[0] == 48)
+		r = (r + 1);
+	return (r);
 }
 
 
