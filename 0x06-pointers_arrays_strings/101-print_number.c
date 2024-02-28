@@ -16,17 +16,21 @@ void print_number(int n)
 		n *= -1;
 		_putchar('-');
 	}
-	else if (n == 0)
+	if (n >= 0 && n < 10)
 	{
-		_putchar('0');
+		_putchar(48 + n);
 	}
-	while (n / 10 > power10)
-		power10 *= 10;
-	new = n;
-	while (new > 0)
+	else
 	{
-		_putchar((new / power10) + 48);
-		new = new % power10;
-		power10 /= 10;
+		while (power10 <= n / 10)
+			power10 *= 10;
+
+		new = n;
+		while (power10 > 0)
+		{
+			_putchar((new / power10) + 48);
+			new = new % power10;
+			power10 /= 10;
+		}
 	}
 }
