@@ -10,13 +10,11 @@
 
 void print_buffer(char *b, int size)
 {
-	int i = 0;
-	int count2 = 0;
-	int count10 = 0;
+	int i, count2, count10;
 
-	while (i < size)
+	for (i = 0; i < size; i += 10)
 	{
-		printf("%p: ", &b[i]);
+		printf("%08x: ", i);
 		for (count10 = 0, count2 = 0; count10 < 10; count10++)
 		{
 			printf("%.2x", *(b + i + count10));
@@ -47,7 +45,6 @@ void print_buffer(char *b, int size)
 			if (count10 == 9)
 				printf("\n");
 		}
-		i += count10;
 	}
 	if (size <= 0)
 		printf("\n");
