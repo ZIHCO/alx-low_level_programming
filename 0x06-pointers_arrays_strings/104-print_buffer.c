@@ -50,6 +50,6 @@ void print_buffer(char *b, int size)
 		}
 		i += count10;
 	}
-	if (size < 0)
+	if (size <= 0)
 		printf("\n");
 }
