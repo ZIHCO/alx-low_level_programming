@@ -51,8 +51,10 @@ void print_buffer(char *b, int size)
 					printf("%c", *(b + i + count10));
 				else
 					printf("%c", '.');
-				if (count10 == 9)
+				if (count10 == 9 || i + count10 == size - 1)
 					printf("\n");
+				if (i + count10 == size - 1)
+					break;
 			}
 		}
 	}
