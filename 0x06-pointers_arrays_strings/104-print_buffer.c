@@ -17,13 +17,17 @@ void print_buffer(char *b, int size)
 	while (i < size)
 	{
 		printf("%p: ", &b[i]);
-		for (count10 = 0, count2 = 0; count10 < 10; count10++, count2++)
+		for (count10 = 0, count2 = 0; count10 < 10; count10++)
 		{
 			printf("%.2x", *(b + i + count10));
 			if (count2 == 1)
 			{
 				printf("%c", ' ');
 				count2 = 0;
+			}
+			else
+			{
+				count2++;
 			}
 		}
 		for (count2 = 0, count10 = 0; count10 < 10; count10++)
