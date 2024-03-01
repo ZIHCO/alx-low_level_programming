@@ -50,4 +50,5 @@ void print_buffer(char *b, int size)
 		}
 		i += count10;
 	}
+	printf("\n");
 }
