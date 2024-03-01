@@ -6,6 +6,7 @@ char *_strncat(char *dest, char *src, int n);
 char *_strncpy(char *dest, char *src, int n);
 int _strlen(char *str);
 void reverse_array(int *a, int n);
+void print_buffer(char *b, int size);
 char *string_toupper(char *s);
 char *cap_string(char *s);
 int seperator_identifier(int n, char *s);
