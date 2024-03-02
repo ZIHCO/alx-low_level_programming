@@ -12,7 +12,7 @@ void print_buffer(char *b, int size)
 {
 	int i, count2, count10;
 
-	if (size <= 0)
+	if (size <= 0 || !b)
 	{
 		printf("\n");
 		return;
@@ -36,11 +36,7 @@ void print_buffer(char *b, int size)
 		}
 		for (count2 = 0, count10 = 0; count10 < 10; count10++)
 		{
-			((*(b + count10 + i) != '\0' && *(b + i + count10) != '\1' &&
-			 *(b + i + count10) != '\2' && *(b + i + count10) != '\3' &&
-			 *(b + i + count10) != '\4' && *(b + i + count10) != '\5' &&
-			 *(b + i + count10) != '\6' && *(b + i + count10) != '\7' &&
-			 *(b + i + count10) != '\n') ? printf("%c", *(b + i + count10)) :
+			(*(b + count10 + i) >= ' ' ? printf("%c", *(b + i + count10)) :
 			 printf("%c", '.'));
 			if (count10 == 9 || i + count10 == size - 1)
 				printf("\n");
