@@ -1,8 +1,10 @@
 #include "main.h"
+#include <stdio.h>
+#include <string.h>
 
 /**
  * _strstr - fill up a memory space
- * @haystack: 8.35 pointer
+ * @haystack: pointer
  * @needle:  pointer
  * Return: s
  */
@@ -10,10 +12,8 @@
 char *_strstr(char *haystack, char *needle)
 {
 	int i, j;
-
 	int length_str = length_needle(needle);
-	if (!haystack || !needle)
-		return ('\0');
+
 	for (i = 0; *(haystack + i) != '\0'; i++)
 	{
 		if (*(needle) == *(haystack + i))
@@ -22,12 +22,12 @@ char *_strstr(char *haystack, char *needle)
 			{
 				if (*(needle + j) != *(haystack + i + j))
 					break;
-				if (j == length_str - 1)
+				else if (j == length_str - 1)
 					return (haystack + i);
 			}
 		}
 	}
-	return ('\0');
+	return ("");
 }
 
 
@@ -39,9 +39,12 @@ char *_strstr(char *haystack, char *needle)
 
 int length_needle(char *str)
 {
-	int i;
+	int i = 0;
 
-	for (i = 0; *(str + i) != '\0'; i++)
-		continue;
+	if (str)
+	{
+		while (*(str + i) != '\0')
+			i++;
+	}
 	return (i);
 }
