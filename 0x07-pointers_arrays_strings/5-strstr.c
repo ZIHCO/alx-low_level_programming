@@ -1,6 +1,4 @@
 #include "main.h"
-#include <stdio.h>
-#include <string.h>
 
 /**
  * _strstr - fill up a memory space
@@ -16,11 +14,11 @@ char *_strstr(char *haystack, char *needle)
 	if (*(haystack) && *(needle))
 	{
 		length_str = length_needle(needle);
-		for (i = 0; *(haystack + i) != '\0'; i++)
+		for (i = 0; *(haystack + i); i++)
 		{
 			if (*(needle) == *(haystack + i))
 			{
-				for (j = 0; *(needle + j) != '\0'; j++)
+				for (j = 0; *(needle + j); j++)
 				{
 					if (*(needle + j) != *(haystack + i + j))
 						break;
